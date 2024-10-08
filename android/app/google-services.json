@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "991792333141",
+    "project_id": "wellnessapp-98c62",
+    "storage_bucket": "wellnessapp-98c62.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:991792333141:android:50d67e7003efb7fca7efdc",
+        "android_client_info": {
+          "package_name": "com.uee.wellnest"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB2tWaf8hrFO82XE69oGl--D5jKh-MEqHA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
