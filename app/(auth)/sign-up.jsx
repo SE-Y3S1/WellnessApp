@@ -1,16 +1,11 @@
-
 import { View, Text, ScrollView, Alert } from 'react-native'
 import { useState } from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import FormField from '../../components/FormField'
 import CustomButton from '../../components/CustomButton'
-import { Link, router } from "expo-router";
-import app from '../../firebaseConfig'
-import {
-  createUserWithEmailAndPassword,
-  getAuth,
-  updateProfile,
-} from 'firebase/auth';
+import { Link, router } from "expo-router"
+import { app } from '../../firebaseConfig'
+import { getAuth, createUserWithEmailAndPassword, updateProfile } from 'firebase/auth';
 
 const SignUp = () => {
   const [isSubmitting, setSubmitting] = useState(false);
@@ -32,7 +27,7 @@ const SignUp = () => {
       );
       await updateProfile(response.user, { displayName: form.username });
 
-      
+
       setSubmitting(false);
 
       Alert.alert(
@@ -94,7 +89,7 @@ const SignUp = () => {
             >
               Sign In
             </Link>
-            </View>
+          </View>
 
         </View>
       </ScrollView>

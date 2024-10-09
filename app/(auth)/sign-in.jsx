@@ -4,9 +4,9 @@ import { StatusBar } from 'expo-status-bar'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import FormField from '../../components/FormField'
 import CustomButton from '../../components/CustomButton'
-import { Link, router } from "expo-router";
-import app from '../../firebaseConfig';
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { Link, router } from "expo-router"
+import app from '../../firebaseConfig'
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth"
 
 const SignIn = () => {
   const [isSubmitting, setSubmitting] = useState(false);
@@ -17,9 +17,10 @@ const SignIn = () => {
 
   async function login() {
     setSubmitting(true);
+
     try {
       const auth = getAuth(app);
-      const response = await signInWithEmailAndPassword(auth, form.email, form.password);
+      await signInWithEmailAndPassword(auth, form.email, form.password);
       setSubmitting(false);
       // navigation.dispatch(StackActions.replace('home')); // use this when following the crud video
       router.replace('home');
